@@ -1,7 +1,7 @@
 #Transmission-daemon for Rpi
-#Version 0.3
+#Version 0.2
 
-FROM resin/rpi-raspbian
+FROM machavez84/rpi-transmission-daemon-base
 LABEL maintainer  Manuel A. Chavez M.
 
 #Torrents download and finished dir
@@ -9,9 +9,6 @@ VOLUME /media/downloads
 
 #Username and passwd for transmission web interface. You must pass this parameters with the RUN command
 ENV ENV_USERNAME=admin ENV_PASSWD=admin
-
-#Install Software
-RUN apt-get update && apt-get install -y transmission-daemon && apt-get clean
 
 #Expose web interface port
 EXPOSE 9091

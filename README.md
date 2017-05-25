@@ -1,4 +1,4 @@
-This image is based on resin/rpi-raspbian
+This image is based on machavez84/rpi-transmission-daemon-base
 
 # To RUN the container:
 
